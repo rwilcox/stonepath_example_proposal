@@ -1,0 +1,14 @@
+.navigation {
+	border: 3px solid #999;
+	background-color: #F4EB97;
+}
+
+.navigation li {
+	display:inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
+
+.current {
+	font-style: italic;
+}
