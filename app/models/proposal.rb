@@ -36,9 +36,13 @@ class Proposal < ActiveRecord::Base
     transitions :to => :accepted, :from => :in_evaluation
   end
 
-
   # Finder Methods
   # _____________________________________________________________________
+
+  # First, we get a ton of named scopes, based on our states, from acts as state machine
+  # See <http://workswithruby.com/2008/5/acts_as_state_machine-with-auto-named_scope-powers>
+  # So that's awesome.
+  # Now code we actually have to write...
 
   # Get all "evaluate proposals" StonePath tasks that are unassigned for this entity
   def unassigned_evaluate_proposals
