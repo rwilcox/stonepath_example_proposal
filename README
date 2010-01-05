@@ -28,3 +28,4 @@ $ script/generate stonepath_task evaluate_proposal
 == Supporting Cast Members
 
 * navigation_helper (<http://rpheath.com/posts/309-rails-plugin-navigation-helper>)
+* bundler
