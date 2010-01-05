@@ -1,0 +1,6 @@
+<% form_for @proposal, :url => {:action => :update, :id => @proposal} do |f| -%>
+	<%= render :partial => 'form', :locals => {:f => f} %>
+	<%= submit_tag "Save changes", :id => "submit",
+		:name => "submit", :class => "form_submit",
+		:disabled => false, :disable_with => "Please wait..." %>
+<% end -%>

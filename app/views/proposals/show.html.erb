@@ -1,0 +1,5 @@
+<% if @proposal %>
+<%= render :partial => 'view' %>
+<% else %>
+	Please do something like <%= link_to "create a Proposal", :action => "new" %>
+<% end %>
