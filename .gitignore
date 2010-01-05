@@ -1,0 +1,4 @@
+
+gems/*
+!gems/cache
+!gems/bundler
