@@ -21,7 +21,7 @@ This scenario is very loosely modeled on some work done by WD-rpw in March 2009,
 
 == Using stonepath
 
-
+$ script/generate script/generate stonepath_work_item proposal  # requires > 0.1.1 of stonepath
 $ script/generate stonepath_task evaluate_proposal
 
 
