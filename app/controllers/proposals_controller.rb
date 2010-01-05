@@ -2,7 +2,7 @@ class ProposalsController < ApplicationController
   before_filter :find_model, :except => [:list, :create]
 
   def index
-    
+    @proposals = Proposal.find(:all)
   end
 
   def new
@@ -10,9 +10,17 @@ class ProposalsController < ApplicationController
   end
 
 
+  def pending
+    @proposals = Proposal.pending
+  end
+
   def create
     @proposal = Proposal.create(params[:proposal ])
     @proposal.save!
+
+    # TODO: create a task, the Evaluate Proposal
+    
+
     redirect_to :action => "show", :id => @proposal.id
   end
 
