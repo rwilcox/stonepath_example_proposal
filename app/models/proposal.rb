@@ -32,7 +32,7 @@ class Proposal < ActiveRecord::Base
     transitions :to => :in_evaluation, :from => :pending
   end
 
-  aasm_eveent :accept do
+  aasm_event :accept do
     transitions :to => :accepted, :from => :in_evaluation
   end
 
