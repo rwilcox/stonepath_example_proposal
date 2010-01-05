@@ -27,6 +27,7 @@ class Proposal < ActiveRecord::Base
   aasm_state :in_evaluation # we are working to determine if this proposal is right for us
   aasm_state :accepted      # this proposal is right for us
   aasm_state :kickback      # The submitter should fix this proposal
+  aasm_state :rejected      # DO NOT WANT!
 
   aasm_event :evaluate do
     transitions :to => :in_evaluation, :from => :pending
