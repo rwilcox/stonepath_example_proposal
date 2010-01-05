@@ -1,16 +1,7 @@
 
-Create a <%= link_to "new proposal", :action => "new" %>
+Create a <%= link_to "new proposal", :action => "new" %>, or see <%= link_to "Pending Proposals", :action => "pending" %>
 
 <div>
 	<h1>Current Proposals</h1>
-	
-	<% Proposal.find(:all).each do |proposal| 
-		@proposal = proposal
-	%>
-		<div style="border: 1px solid #999; margin-bottom: 4em">
-			<%= render :partial => 'view', :object=> proposal %>
-			<%= link_to "Edit", :action => "edit", :id => proposal %>
-			<%= link_to "Show", :action => "show", :id => proposal %>
-		</div>
-	<% end %>
+	<%= render :partial => 'list' %>
 </div>
