@@ -5,3 +5,6 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+
+organizations = [Organization.find_or_create_by_name("Agile Organization"),
+                 Organization.find_or_create_by_name("Umbrella Organization")]
