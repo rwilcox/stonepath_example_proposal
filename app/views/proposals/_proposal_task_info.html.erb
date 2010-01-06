@@ -4,6 +4,9 @@
 		<th>Task State</th>
 		<th>Task Owner</th>
 		<th>Proposal Link</th>
+		<% if controller.controller_name == "organizations" %>
+			<th>Edit</th>
+		<% end %>
 	</tr>
 <% tasks.each do |t| %>
 	<tr>
@@ -19,6 +22,11 @@
 		<td>
 			<%= link_to "Proposal #{t.workitem.title}", :controller => "proposals", :action => "show", :id => t.workitem %>
 		</td>
+		<% if controller.controller_name == "organizations" %>
+		<td>
+			<%= link_to "Edit Task", :controller => "organizations", :action => "edit_task", :id => t %>
+		</td>
+		<% end %>
 	</tr>
 <% end %>
 </table>
