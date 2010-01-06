@@ -3,6 +3,7 @@
 		<th>Time Created</th>
 		<th>Task State</th>
 		<th>Task Owner</th>
+		<th>Proposal Link</th>
 	</tr>
 <% tasks.each do |t| %>
 	<tr>
@@ -14,6 +15,9 @@
 		</td>
 		<td>
 			<%= Organization.find(t.workbench.id).name %>
+		</td>
+		<td>
+			<%= link_to "Proposal #{t.workitem.title}", :controller => "proposals", :action => "show", :id => t.workitem %>
 		</td>
 	</tr>
 <% end %>
