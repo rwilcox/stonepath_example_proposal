@@ -58,8 +58,17 @@ class Proposal < ActiveRecord::Base
   # our association methods and aggregate them ourselves
   def unassigned_tasks
     output = []
-    task_types.each do |association_symbol|
-      output << self.send(association_symbol).unassigned
+    @@task_types.each do |association_symbol|
+      output = output + self.send(association_symbol).unassigned
+    end
+    output
+  end
+
+  # Just like the above method, except we're getting active tasks
+  def active_tasks
+    output = []
+    @@task_types.each do |association_symbol|
+      output = output + self.send(association_symbol).active
     end
     output
   end
