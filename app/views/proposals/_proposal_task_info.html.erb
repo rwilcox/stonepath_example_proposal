@@ -1,0 +1,20 @@
+<table border=1 style="margin-left: 2em">
+	<tr>
+		<th>Time Created</th>
+		<th>Task State</th>
+		<th>Task Owner</th>
+	</tr>
+<% tasks.each do |t| %>
+	<tr>
+		<td>
+		<%= t.created_at %>
+		</td>
+		<td>
+			<%= t.aasm_current_state %>
+		</td>
+		<td>
+			<%= Organization.find(t.workbench.id).name %>
+		</td>
+	</tr>
+<% end %>
+</table>

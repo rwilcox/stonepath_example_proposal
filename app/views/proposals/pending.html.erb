@@ -1,4 +1,12 @@
 <div>
 	<h1>Pending Proposals</h1>
-	<%= render :partial => 'list' %>
+	<% @proposals.each do |proposal| 
+		@proposal = proposal
+	%>
+		<div style="border: 1px solid #999; margin-bottom: 2em">
+			<%= render :partial => 'view', :object=> proposal %>
+			<%= link_to "Edit", :action => "edit", :id => proposal %>			
+		</div>
+	<% end %>
+	
 </div>

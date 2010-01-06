@@ -1,2 +1,18 @@
+Proposal Number: <%= @proposal.id %></br>
 Title: <%= @proposal.title %></br>
 Owner: <%= @proposal.owner %></br>
+<h3>Unassigned Tasks for this proposal</h3>
+<% tasks = @proposal.unassigned_tasks %>
+<% if tasks.length > 0%>
+	<%= render :partial => 'proposal_task_info', :locals => {:tasks => tasks} %>
+<% else %>
+	<span style="margin-left: 2em">No tasks assigned yet</span>
+<% end %>
+
+<h3>Active Tasks for this proposal</h3>
+<% active_tasks = @proposal.active_tasks %>
+<% if active_tasks.length > 0%>
+	<%= render :partial => 'proposal_task_info', :locals => {:tasks => active_tasks} %>
+<% else %>
+	<span style="margin-left: 2em">No tasks active yet</span>
+<% end %>

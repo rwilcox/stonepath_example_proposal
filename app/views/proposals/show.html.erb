@@ -1,5 +1,14 @@
 <% if @proposal %>
 <%= render :partial => 'view' %>
+
+<h3>Create a new task for this Proposal</h3>
+<div style="margin-left: 2em">
+	<% form_tag(:action => "send_evaluate_prop", :id => @proposal) do %>
+	  <%= select("organization", "organization_id", Organization.all.collect{|o| [o.name, o.id]}, {:include_blank => "None"})%>
+	  <%= submit_tag "Assign To Organization", :id => "submit", :name => "submit", :class => "form_submit" %>
+	<% end -%>
+</div>
+
 <% else %>
 	Please do something like <%= link_to "create a Proposal", :action => "new" %>
 <% end %>
