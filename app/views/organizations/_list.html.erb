@@ -2,8 +2,8 @@
 	@organization = organization
 %>
 	<div style="border: 1px solid #999; margin-bottom: 2em">
-		Title: <%= @organization.name %></br>
-		<h2>Evaluate Proposal Tasks</h2>
+		<h2>Title: <%= @organization.name %></h2></br>
+		<h3>Evaluate Proposal Tasks</h3>
 			<%= render :partial => "proposals/proposal_task_info", :locals => {:tasks => organization.evaluate_proposals} %>
 	</div>
 <% end %>
