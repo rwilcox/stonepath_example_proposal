@@ -26,9 +26,7 @@ class Proposal < ActiveRecord::Base
   # _____________________________________________________________________
   aasm_initial_state :pending
   aasm_state :pending       # nobody has seen this proposal yet, an admin needs to take the first action
-  aasm_state :in_evaluation # we are working to determine if this proposal is right for us
   aasm_state :accepted      # this proposal is right for us
-  aasm_state :kickback      # The submitter should fix this proposal
   aasm_state :rejected      # DO NOT WANT!
 
   aasm_event :evaluate do
@@ -36,7 +34,11 @@ class Proposal < ActiveRecord::Base
   end
 
   aasm_event :accept do
-    transitions :to => :accepted, :from => :in_evaluation
+    transitions :to => :accepted, :from => :pending
+  end
+
+  aasm_event :reject do
+    transitions :to => :rejected, :from => :pending
   end
 
   # Finder Methods
