@@ -19,6 +19,8 @@ class Proposal < ActiveRecord::Base
   task_types = [:evaluate_proposal]   # for the "unassigned_tasks" finder we need this. RPW 01-05-2010
                                       # This is slightly off the StonePath functionality, but
                                       # it came up in discussion so it may be useful
+                                      # but I'm not sure how useful this actually is, outside of theory.
+                                      # RPW 01-06-2010
 
   # AASM States & Events
   # _____________________________________________________________________
