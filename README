@@ -23,12 +23,12 @@ The database entities in this app are: Proposals and Organizations
 
 == The Scenario, as Agile requirements
 
-As a user I should be able to add a new Proposal to the System [done RPW 01-05-2010]
-As the system I should be able to generate a list of Proposals that are pending administrator review [done RPW 01-05-2010]
-As an administrator I should be able to assign a Proposal to an Organization for acceptance or kickback. [done RPW 01-06-2010]
-As an Organization I should be able to see my assigned tasks [RPW 01-06-2010]
-As an Organization I should be able to accept or kickback the Proposal (a kickback would be passed back to the Administrator)
-As a administrator I should be able to see the status of the proposal's work items
+* As a user I should be able to add a new Proposal to the System [done RPW 01-05-2010]
+* As the system I should be able to generate a list of Proposals that are pending administrator review [done RPW 01-05-2010]
+* As an administrator I should be able to assign a Proposal to an Organization for acceptance or kickback. [done RPW 01-06-2010]
+* As an Organization I should be able to see my assigned tasks [RPW 01-06-2010]
+* As an Organization I should be able to accept or kickback the Proposal (a kickback would be passed back to the Administrator)
+* As a administrator I should be able to see the status of the proposal's work items
 
 == The Scenario, in programmer talk
 
