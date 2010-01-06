@@ -41,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'proposals/pending', :controller => "proposals", :action => "pending"
   map.connect 'proposals/send_evaluate_prop', :controller => "proposals", :action => "send_evaluate_prop"
   map.resources :proposals
+  map.resources :organizations
   map.users 'users/:id', :controller => "users"
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
