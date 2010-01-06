@@ -1,6 +1,8 @@
 Proposal Number: <%= @proposal.id %></br>
 Title: <%= @proposal.title %></br>
 Owner: <%= @proposal.owner %></br>
+State: <%= @proposal.aasm_current_state %></br>
+
 <h3>Unassigned Tasks for this proposal</h3>
 <% tasks = @proposal.unassigned_tasks %>
 <% if tasks.length > 0%>
