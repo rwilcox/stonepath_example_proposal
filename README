@@ -28,7 +28,7 @@ The database entities in this app are: Proposals and Organizations
 * As an administrator I should be able to assign a Proposal to an Organization for acceptance or kickback. [done RPW 01-06-2010]
 * As an Organization I should be able to see my assigned tasks [RPW 01-06-2010]
 * As an Organization I should be able to accept or kickback the Proposal (a kickback would be passed back to the Administrator)
-* As a administrator I should be able to see the status of the proposal's work items
+* As a administrator I should be able to see the status of the proposal's work items [RPW 01-06-2010]
 
 == The Scenario, in programmer talk
 
