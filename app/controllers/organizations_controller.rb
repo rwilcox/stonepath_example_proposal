@@ -1,5 +1,5 @@
 class OrganizationsController < ApplicationController
-  before_filter :find_model, :except => [:list, :create, :edit_task]
+  before_filter :find_model, :except => [:list, :create, :edit_task, :mark_task_as_complete]
 
   def index
     @organizations = Organization.find(:all)
