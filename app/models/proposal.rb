@@ -13,10 +13,10 @@ class Proposal < ActiveRecord::Base
 
   # define the tasks that we need for this model
   # _____________________________________________________________________
-  tasked_through :evaluate_proposal   # a proposal can be evaluated by administrative users
+  tasked_through :evaluate_proposals   # a proposal can be evaluated by administrative users
                                       # this gives us a has_many relationship
 
-  task_types = [:evaluate_proposal]   # for the "unassigned_tasks" finder we need this. RPW 01-05-2010
+  @@task_types = [:evaluate_proposals]   # for the "unassigned_tasks" finder we need this. RPW 01-05-2010
                                       # This is slightly off the StonePath functionality, but
                                       # it came up in discussion so it may be useful
                                       # but I'm not sure how useful this actually is, outside of theory.
