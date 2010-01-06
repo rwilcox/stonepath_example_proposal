@@ -45,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'organizations/mark_task_as_complete', :controller => "organizations", :action => "mark_task_as_complete"
   map.resources :organizations
   map.users 'users/:id', :controller => "users"
+  map.connect '/', :controller => 'proposals', :action => "index"
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
 end
