@@ -20,7 +20,11 @@
 			<%= Organization.find(t.workbench.id).name %>
 		</td>
 		<td>
-			<%= link_to "Proposal #{t.workitem.title}", :controller => "proposals", :action => "show", :id => t.workitem %>
+			<% begin %>
+				<%= link_to "Proposal #{t.workitem ? t.workitem.title : 'No Work Item Found (deleted?)'}", :controller => "proposals", :action => "show", :id => t.workitem %>
+			<% rescue ActionController::RoutingError %>
+				No Work Item Found (deleted?)
+			<% end %>
 		</td>
 		<% if controller.controller_name == "organizations" %>
 		<td>
