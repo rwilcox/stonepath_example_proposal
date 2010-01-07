@@ -47,9 +47,9 @@ $ rake db:migrate
 $ rake db:seed
 $ script/server
 
-== Using stonepath
+== Using stonepath in your app
 
-$ script/generate script/generate stonepath_work_item proposal  # requires > 0.1.1 of stonepath
+$ script/generate script/generate stonepath_work_item Proposal  title:string     # requires > 0.1.1 of stonepath
 $ script/generate stonepath_task evaluate_proposal
 
 
