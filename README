@@ -40,6 +40,8 @@ This scenario is very loosely modeled on some work done by WD-rpw in March 2009,
 
 == Setting up this app to run
 
+$ gem install bundler
+$ script/bundle
 $ rake db:create
 $ rake db:migrate
 $ rake db:seed
@@ -54,5 +56,5 @@ $ script/generate stonepath_task evaluate_proposal
 == Supporting Cast Members
 
 * navigation_helper (<http://rpheath.com/posts/309-rails-plugin-navigation-helper>)
-* bundler
+* bundler (<http://litanyagainstfear.com/blog/2009/10/14/gem-bundler-is-the-future/>)
 * Rails new seed data functionality (<http://railscasts.com/episodes/179-seed-data>)
