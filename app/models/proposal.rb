@@ -10,6 +10,15 @@ class Proposal < ActiveRecord::Base
                       # I'm going to say for this example a Proposal has no owner, but I may change this
                       # (for example, evaluate_proposal may set the owner. RPW 01-05-2010)
 
+  log_events          # when you want a work item to log call this method
+                      # which sets up a has_many :logging_events (...)
+                      # and sets up an AASM callback to log when this item's state
+                      # changes.
+                      #
+                      # Logging is availiable for all the stonepath domain objects:
+                      # we could put it on our EvaluateProposal StonePath task if
+                      # we wanted. For our illustrative purposes, having it on
+                      # the WorkItem is fine. RPW 01-18-2010
 
   # define the tasks that we need for this model
   # _____________________________________________________________________

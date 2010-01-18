@@ -51,7 +51,7 @@ $ script/server
 
 $ script/generate script/generate stonepath_work_item Proposal  title:string     # requires > 0.1.1 of stonepath
 $ script/generate stonepath_task evaluate_proposal
-
+$ script/generate stonepath_eventlog
 
 == Supporting Cast Members
 
